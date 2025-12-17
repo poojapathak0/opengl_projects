@@ -1,4 +1,7 @@
-https://github.com/user-attachments/assets/22ab5b7b-3f4d-4e01-8a1e-ef38a77ce497
+
+
+https://github.com/user-attachments/assets/def06b3d-0858-4963-a935-724c39f1fe89
+
 
 
 # POOJA - Name Display using OpenGL Polygons
