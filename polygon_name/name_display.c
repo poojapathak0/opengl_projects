@@ -14,30 +14,50 @@ void processInput(GLFWwindow* window) {
 
 // Draw letter P
 void drawP(float x, float y, float size) {
+    // Vertical bar
     glBegin(GL_POLYGON);
     glVertex2f(x, y);
-    glVertex2f(x + size * 0.1f, y);
-    glVertex2f(x + size * 0.1f, y + size);
+    glVertex2f(x + size * 0.15f, y);
+    glVertex2f(x + size * 0.15f, y + size);
     glVertex2f(x, y + size);
     glEnd();
     
+    // Top horizontal bar
+    glBegin(GL_POLYGON);
+    glVertex2f(x, y + size * 0.85f);
+    glVertex2f(x + size * 0.5f, y + size * 0.85f);
+    glVertex2f(x + size * 0.5f, y + size);
+    glVertex2f(x, y + size);
+    glEnd();
+    
+    // Middle horizontal bar
     glBegin(GL_POLYGON);
     glVertex2f(x, y + size * 0.5f);
-    glVertex2f(x + size * 0.4f, y + size * 0.5f);
-    glVertex2f(x + size * 0.4f, y + size);
-    glVertex2f(x, y + size);
+    glVertex2f(x + size * 0.5f, y + size * 0.5f);
+    glVertex2f(x + size * 0.5f, y + size * 0.65f);
+    glVertex2f(x, y + size * 0.65f);
     glEnd();
     
+    // Right vertical bar
     glBegin(GL_POLYGON);
-    glVertex2f(x + size * 0.4f, y + size * 0.9f);
-    glVertex2f(x + size * 0.5f, y + size * 0.9f);
-    glVertex2f(x + size * 0.5f, y + size * 0.6f);
-    glVertex2f(x + size * 0.4f, y + size * 0.6f);
+    glVertex2f(x + size * 0.35f, y + size * 0.65f);
+    glVertex2f(x + size * 0.5f, y + size * 0.65f);
+    glVertex2f(x + size * 0.5f, y + size * 0.85f);
+    glVertex2f(x + size * 0.35f, y + size * 0.85f);
     glEnd();
 }
 
 // Draw letter O
 void drawO(float x, float y, float size) {
+    // Top bar
+    glBegin(GL_POLYGON);
+    glVertex2f(x, y + size * 0.85f);
+    glVertex2f(x + size * 0.5f, y + size * 0.85f);
+    glVertex2f(x + size * 0.5f, y + size);
+    glVertex2f(x, y + size);
+    glEnd();
+    
+    // Bottom bar
     glBegin(GL_POLYGON);
     glVertex2f(x, y);
     glVertex2f(x + size * 0.5f, y);
@@ -45,68 +65,26 @@ void drawO(float x, float y, float size) {
     glVertex2f(x, y + size * 0.15f);
     glEnd();
     
-    glBegin(GL_POLYGON);
-    glVertex2f(x, y + size * 0.85f);
-    glVertex2f(x + size * 0.5f, y + size * 0.85f);
-    glVertex2f(x + size * 0.5f, y + size);
-    glVertex2f(x, y + size);
-    glEnd();
-    
+    // Left bar
     glBegin(GL_POLYGON);
     glVertex2f(x, y);
-    glVertex2f(x + size * 0.1f, y);
-    glVertex2f(x + size * 0.1f, y + size);
+    glVertex2f(x + size * 0.15f, y);
+    glVertex2f(x + size * 0.15f, y + size);
     glVertex2f(x, y + size);
     glEnd();
     
+    // Right bar
     glBegin(GL_POLYGON);
-    glVertex2f(x + size * 0.4f, y);
+    glVertex2f(x + size * 0.35f, y);
     glVertex2f(x + size * 0.5f, y);
     glVertex2f(x + size * 0.5f, y + size);
-    glVertex2f(x + size * 0.4f, y + size);
+    glVertex2f(x + size * 0.35f, y + size);
     glEnd();
 }
 
 // Draw letter J
 void drawJ(float x, float y, float size) {
-    glBegin(GL_POLYGON);
-    glVertex2f(x + size * 0.2f, y + size * 0.8f);
-    glVertex2f(x + size * 0.3f, y + size * 0.8f);
-    glVertex2f(x + size * 0.3f, y + size);
-    glVertex2f(x + size * 0.2f, y + size);
-    glEnd();
-    
-    glBegin(GL_POLYGON);
-    glVertex2f(x, y);
-    glVertex2f(x + size * 0.3f, y);
-    glVertex2f(x + size * 0.3f, y + size * 0.2f);
-    glVertex2f(x, y + size * 0.2f);
-    glEnd();
-    
-    glBegin(GL_POLYGON);
-    glVertex2f(x, y);
-    glVertex2f(x + size * 0.1f, y);
-    glVertex2f(x + size * 0.1f, y + size * 0.85f);
-    glVertex2f(x, y + size * 0.85f);
-    glEnd();
-}
-
-// Draw letter A
-void drawA(float x, float y, float size) {
-    glBegin(GL_POLYGON);
-    glVertex2f(x, y);
-    glVertex2f(x + size * 0.1f, y);
-    glVertex2f(x + size * 0.1f, y + size);
-    glVertex2f(x, y + size);
-    glEnd();
-    
-    glBegin(GL_POLYGON);
-    glVertex2f(x + size * 0.4f, y);
-    glVertex2f(x + size * 0.5f, y);
-    glVertex2f(x + size * 0.5f, y + size);
-    glVertex2f(x + size * 0.4f, y + size);
-    glEnd();
-    
+    // Top bar
     glBegin(GL_POLYGON);
     glVertex2f(x, y + size * 0.85f);
     glVertex2f(x + size * 0.5f, y + size * 0.85f);
@@ -114,11 +92,55 @@ void drawA(float x, float y, float size) {
     glVertex2f(x, y + size);
     glEnd();
     
+    // Vertical bar
+    glBegin(GL_POLYGON);
+    glVertex2f(x + size * 0.175f, y);
+    glVertex2f(x + size * 0.325f, y);
+    glVertex2f(x + size * 0.325f, y + size * 0.85f);
+    glVertex2f(x + size * 0.175f, y + size * 0.85f);
+    glEnd();
+    
+    // Bottom left bar
+    glBegin(GL_POLYGON);
+    glVertex2f(x, y);
+    glVertex2f(x + size * 0.175f, y);
+    glVertex2f(x + size * 0.175f, y + size * 0.15f);
+    glVertex2f(x, y + size * 0.15f);
+    glEnd();
+}
+
+// Draw letter A
+void drawA(float x, float y, float size) {
+    // Left vertical bar
+    glBegin(GL_POLYGON);
+    glVertex2f(x, y);
+    glVertex2f(x + size * 0.15f, y);
+    glVertex2f(x + size * 0.15f, y + size);
+    glVertex2f(x, y + size);
+    glEnd();
+    
+    // Right vertical bar
+    glBegin(GL_POLYGON);
+    glVertex2f(x + size * 0.35f, y);
+    glVertex2f(x + size * 0.5f, y);
+    glVertex2f(x + size * 0.5f, y + size);
+    glVertex2f(x + size * 0.35f, y + size);
+    glEnd();
+    
+    // Top bar
+    glBegin(GL_POLYGON);
+    glVertex2f(x, y + size * 0.85f);
+    glVertex2f(x + size * 0.5f, y + size * 0.85f);
+    glVertex2f(x + size * 0.5f, y + size);
+    glVertex2f(x, y + size);
+    glEnd();
+    
+    // Middle bar
     glBegin(GL_POLYGON);
     glVertex2f(x, y + size * 0.4f);
     glVertex2f(x + size * 0.5f, y + size * 0.4f);
-    glVertex2f(x + size * 0.5f, y + size * 0.5f);
-    glVertex2f(x, y + size * 0.5f);
+    glVertex2f(x + size * 0.5f, y + size * 0.55f);
+    glVertex2f(x, y + size * 0.55f);
     glEnd();
 }
 
@@ -131,7 +153,7 @@ int main() {
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 2);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 1);
 
-    GLFWwindow* window = glfwCreateWindow(900, 400, "POOJA - Name Display", NULL, NULL);
+    GLFWwindow* window = glfwCreateWindow(1000, 500, "POOJA - Polygon Name", NULL, NULL);
     if (window == NULL) {
         printf("Failed to create GLFW window\n");
         glfwTerminate();
@@ -145,7 +167,7 @@ int main() {
         return -1;
     }
 
-    printf("Display: POOJA\n");
+    printf("Display: POOJA using Polygons\n");
     printf("Press ESC to close the window\n");
 
     while (!glfwWindowShouldClose(window)) {
@@ -154,19 +176,30 @@ int main() {
         glClearColor(0.1f, 0.1f, 0.15f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
 
-        // Set color to bright cyan
-        glColor3f(0.0f, 0.9f, 0.9f);
+        // Draw POOJA with different colors
+        float letterSize = 0.35f;
+        float spacing = 0.38f;
+        float startX = -0.90f;
+        float yPos = -0.175f;
 
-        // Draw POOJA with proper spacing
-        float letterSize = 0.3f;
-        float spacing = 0.35f;
-        float startX = -0.85f;
-        float yPos = -0.15f;
-
+        // P - Red/Pink
+        glColor3f(1.0f, 0.3f, 0.5f);
         drawP(startX, yPos, letterSize);
+        
+        // O - Orange
+        glColor3f(1.0f, 0.6f, 0.2f);
         drawO(startX + spacing, yPos, letterSize);
+        
+        // O - Yellow
+        glColor3f(1.0f, 0.9f, 0.2f);
         drawO(startX + spacing * 2, yPos, letterSize);
+        
+        // J - Green
+        glColor3f(0.3f, 1.0f, 0.4f);
         drawJ(startX + spacing * 3, yPos, letterSize);
+        
+        // A - Blue/Purple
+        glColor3f(0.5f, 0.4f, 1.0f);
         drawA(startX + spacing * 4, yPos, letterSize);
 
         glfwSwapBuffers(window);
