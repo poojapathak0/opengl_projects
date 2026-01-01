@@ -1,0 +1,44 @@
+# Compiled executables
+*.exe
+*.out
+*.app
+
+# Object files
+*.o
+*.obj
+
+# Libraries (compiled)
+*.lib
+*.a
+*.dll
+*.so
+*.dylib
+
+# Debug files
+*.pdb
+*.ilk
+
+# VS Code settings (may contain local paths)
+.vscode/
+*.code-workspace
+
+# Build directories
+build/
+bin/
+obj/
+
+# OS specific files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Personal/sensitive data patterns
+# (uncomment if you have config files with passwords or API keys)
+# config.json
+# .env
+# secrets.*
